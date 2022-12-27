@@ -37,4 +37,4 @@ for index, row in df.iterrows():
         continue
     new_row = {"name": row["name"], "salary": salary, "area_name": row.area_name, "published_at": row.published_at}
     parsed_df.loc[index] = pd.Series(new_row)
-parsed_df.to_csv("parsed_salary.csv", index=False)
+parsed_df.head(100).to_csv("parsed_salary.csv", index=False)
